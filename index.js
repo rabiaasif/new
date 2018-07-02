@@ -37,7 +37,7 @@ app.post('/webhook/', function(req, res) {
 		if (event.message && event.message.text) {
 			let text = event.message.text
 			if (text.includes("directions")) {
-					text = text.substring(12, 100)
+					text = text.substring(13, 100)
 			sendText(sender, "https://www.google.com/maps/dir/" + (text.replace(/\s/g, '')) )
 		};
 		if (text.includes("weather")) {

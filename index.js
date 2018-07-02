@@ -37,7 +37,8 @@ app.post('/webhook/', function(req, res) {
 		if (event.message && event.message.text) {
 			let text = event.message.text
 			if (text.includes("directions")) {
-			sendText(sender, "https://www.google.com/maps/dir/" + (text.replace(/\s/g, '')).substring(10, 100); )};
+					text = text.substring(10, 100)
+			sendText(sender, "https://www.google.com/maps/dir/" + (text.replace(/\s/g, '')) )};
 		}
 	}
 	res.sendStatus(200)

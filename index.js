@@ -44,10 +44,10 @@ app.post('/webhook/', function(req, res) {
 					
 			sendText(sender, "https://www.google.ca/search?ei=BxE6W9uCGqzSjwT8kbKwBQ&q=weather&oq=weather&gs_l=psy-ab.3..0i131i67k1l4j0i131k1j0i131i67k1j0i131k1j0i67k1l3.3530.4401.0.4714.7.7.0.0.0.0.136.551.4j2.6.0....0...1.1.64.psy-ab..1.6.549....0.TQORcETqcmY")
 		};
-		else{
+		
 
 			sendText(sender, "Text Echo:" + text.substring(0,100))
-		}
+		
 		}
 	}
 	res.sendStatus(200)
